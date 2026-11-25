@@ -1,0 +1,44 @@
+{
+  "geode": "6.0.0",
+  "gd": {
+    "win": "2.2091"
+  },
+  "id": "noa.gd3d-renderer",
+  "name": "GD 3D Renderer",
+  "version": "v0.4.0",
+  "developer": "Noa",
+  "description": "Editor OBJ preview with a trigger-driven 3D baseplate wireframe rig. Preserves the previous raster flipbook as a legacy bake option.",
+  "settings": {
+    "engine-title": {
+      "type": "title",
+      "name": "3D Level Engine"
+    },
+    "legacy-raster-bake": {
+      "type": "bool",
+      "name": "Legacy raster flipbook bake",
+      "description": "Use the previous 32x32 pixel flipbook renderer instead of the new reusable baseplate rig. Enable this for dense models or when the transform-trigger rig does not work well.",
+      "default": false
+    },
+    "baseplate-engine-info": {
+      "type": "info",
+      "name": "Default: Baseplate transform rig",
+      "description": "Creates one reusable stretched block per mesh edge and animates it with looping Move, Rotate and Scale triggers. The result runs without Geode. This first version uses sampled transform poses; Item Edit outputs cannot currently be wired directly into Move/Scale coordinate fields."
+    },
+    "legacy-render-style-title": {
+      "type": "title",
+      "name": "Legacy Preview Style"
+    },
+    "legacy-style": {
+      "type": "bool",
+      "name": "Legacy face colors",
+      "description": "Start the preview in classic per-face colors instead of neutral grayscale shading.",
+      "default": false
+    },
+    "legacy-outlines": {
+      "type": "bool",
+      "name": "Legacy outlines",
+      "description": "Start the preview with silhouette and sharp-crease outlines enabled. Smooth internal triangle seams remain hidden.",
+      "default": false
+    }
+  }
+}
